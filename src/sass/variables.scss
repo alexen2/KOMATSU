@@ -1,0 +1,58 @@
+/*
+ * Fonts
+ *
+ */
+
+$font-main: "Roboto", sans-serif;
+
+/*
+ * Colors
+ *
+ */
+$color-primary: #E9AF3C;
+$color-primary-dark: #D79E36;
+$color-primary-x-dark: #B27B2A;
+$color-primary-lite: #F4D79D;
+$color-secondary: #363D4F;
+
+$color-text: #909192;
+$color-background: #F8F8FB;
+$color-helper-1: #E3E3E3;
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+/*
+ * Grid
+ *
+ */
+$breakpoints: (
+	sm: 480px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px
+);
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1620px
+);
+
+/*
+ * Animation Speed
+ *
+ */
+
+$animation-speed: 0.4s;
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */
