@@ -1,0 +1,121 @@
+.btn--circle {
+	/* 2 Block model */
+	padding: 0;
+	margin: 0;
+
+	/* 3 Typography */
+	text-transform: none;
+
+	/* 4 Visual */
+	cursor: pointer;
+	user-select: none;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+.btn--circle .btn__text {
+	/* 1 Positioning */
+	position: relative;
+	z-index: 5;
+}
+.btn--circle::before {
+	/* 1 Positioning */
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+
+	/* 2 Block model */
+	display: block;
+	width: 48px;
+	height: 48px;
+
+	/* 4 Visual */
+	content: '';
+	background-color: $color-primary;
+	border-radius: 50%;
+	transition: all $animation-speed;
+	transform: translate(-36%, -50%);
+}
+.btn--circle::after {
+	/* 1 Positioning */
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 1;
+
+	/* 2 Block model */
+	display: block;
+	width: 64px;
+	height: 64px;
+
+	/* 4 Visual */
+	content: '';
+	background-color: $color-primary;
+	border-radius: 50%;
+	opacity: 0.5;
+	transition: all $animation-speed;
+	transform: translate(-39%, -50%);
+}
+.btn--circle:hover {
+	/* 4 Visual */
+	background-color: transparent;
+	border: none;
+}
+.btn--circle:focus {
+	/* 4 Visual */
+	background-color: transparent;
+	border: none;
+}
+.btn--circle:hover::before {
+	/* 4 Visual */
+	opacity: 0;
+}
+.btn--circle:hover::after {
+	/* 2 Block model */
+	left: -15px;
+
+	/* 2 Block model */
+	width: 109%;
+
+	/* 4 Visual */
+	background-color: $color-primary;
+	border-radius: 5px;
+	opacity: 1;
+	transform: translate(0, -50%);
+}
+.btn--circle:focus::before {
+	/* 4 Visual */
+	opacity: 0;
+}
+.btn--circle:focus::after {
+	/* 2 Block model */
+	left: -15px;
+
+	/* 2 Block model */
+	width: 109%;
+
+	/* 4 Visual */
+	background-color: $color-primary;
+	border-radius: 5px;
+	opacity: 1;
+	transform: translate(0, -50%);
+}
+.btn--circle:active::after {
+	/* 4 Visual */
+	background-color: $color-primary-x-dark;
+	border: none;
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */

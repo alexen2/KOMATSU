@@ -1,0 +1,6 @@
+mixin card(data)
+	a.card(href=data.link)
+		div.card__left
+			h4.h4!=data.title
+		div.card__right
+			img.img(src="images/"+data.img+".jpg", srcset="images/"+data.img+"@2x.jpg 2x", alt=data.alt)
