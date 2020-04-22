@@ -1,0 +1,243 @@
+.btn-circle {
+	/* 1 Positioning */
+	position: relative;
+
+	/* 2 Block model */
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+	margin: 0;
+	overflow: visible;
+
+	/* 3 Typography */
+	font-family: $font-main;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 20px;
+	color: $color-secondary;
+	text-decoration: none;
+	vertical-align: middle;
+
+	/* 4 Visual */
+	cursor: pointer;
+	user-select: none;
+	background-color: transparent;
+	border: none;
+	border-radius: 0;
+	outline: none;
+
+	/* 5 Animation */
+	transition: all 0.5s $cubic-bezier 0.15s;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+}
+.btn-circle__text {
+	/* 1 Positioning */
+	position: relative;
+	z-index: 5;
+}
+.btn-circle::before {
+	/* 1 Positioning */
+	position: absolute;
+	top: -14px;
+	left: 3px;
+	z-index: 1;
+
+	/* 2 Block model */
+	display: block;
+	width: 48px;
+	height: 48px;
+
+	/* 4 Visual */
+	content: '';
+	background-color: $color-primary;
+	border-radius: 50%;
+	transition: all 1s $cubic-bezier 0.15s;
+	animation: top 8s linear;
+	animation-iteration-count: infinite;
+}
+.btn-circle::after {
+	/* 1 Positioning */
+	position: absolute;
+	top: -22px;
+	left: -5px;
+	z-index: 1;
+
+	/* 2 Block model */
+	display: block;
+	width: 64px;
+	height: 64px;
+
+	/* 4 Visual */
+	content: '';
+	background-color: $color-primary;
+	border-radius: 50%;
+	opacity: 0.5;
+	transition: all 0.8s $cubic-bezier 0.15s;
+	animation: bottom 8s linear;
+	animation-iteration-count: infinite;
+}
+.btn-circle:hover {
+	/* 4 Visual */
+	background-color: transparent;
+	border: none;
+}
+.btn-circle:focus {
+	/* 4 Visual */
+	background-color: transparent;
+	border: none;
+}
+.btn-circle:hover::before,
+.btn-circle:hover::after {
+	/* 5 Animation */
+	animation: none;
+}
+.btn-circle:focus::before,
+.btn-circle:focus::after {
+	/* 5 Animation */
+	animation: none;
+}
+.btn-circle:active::before,
+.btn-circle:active::after {
+	display: block;
+
+	/* 5 Animation */
+	animation: none;
+}
+.btn-circle:hover::before {
+	/* 2 Block model */
+	top: -62%;
+	left: 0;
+
+	/* 2 Block model */
+	width: 100%;
+
+	/* 4 Visual */
+	background-color: $color-primary;
+	border-radius: 5px;
+	opacity: 1;
+}
+.btn-circle:focus::before {
+	/* 2 Block model */
+	top: -62%;
+	left: 0;
+
+	/* 2 Block model */
+	width: 100%;
+
+	/* 4 Visual */
+	background-color: $color-primary;
+	border-radius: 5px;
+	opacity: 1;
+}
+.btn-circle:hover::after {
+	/* 2 Block model */
+	width: 100%;
+
+	/* 4 Visual */
+	opacity: 0;
+}
+.btn-circle:focus::after {
+	/* 2 Block model */
+	width: 100%;
+
+	/* 4 Visual */
+	opacity: 0;
+}
+.btn-circle:active {
+	/* 2 Block model */
+	padding: 0 20px;
+
+	/* 3 Typography */
+	color: $color-white;
+
+	/* 4 Visual */
+	background-color: transparent;
+	border: 0;
+	transition: 800ms ease all;
+}
+.btn-circle:active::before {
+	/* 4 Visual */
+	background-color: $color-primary-x-dark;
+	border: none;
+}
+
+@keyframes top {
+	0% {
+		transform: translate(0, 0);
+	}
+	12% {
+		transform: translate(-8px, -8px);
+	}
+	24% {
+		transform: translate(-8px, -4px);
+	}
+	36% {
+		transform: translate(-2px, 0);
+	}
+	48% {
+		transform: translate(8px, -8px);
+	}
+	60% {
+		transform: translate(6px, 4px);
+	}
+	72% {
+		transform: translate(0, 8px);
+	}
+	84% {
+		transform: translate(-5px, 0);
+	}
+	96% {
+		transform: translate(-2px, -3px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+@keyframes bottom {
+	0% {
+		transform: translate(0, 0);
+	}
+	12% {
+		transform: translate(6px, -6px);
+	}
+	24% {
+		transform: translate(2px, -3px);
+	}
+	36% {
+		transform: translate(-2px, 3px);
+	}
+	48% {
+		transform: translate(-6px, 4px);
+	}
+	60% {
+		transform: translate(-6px, 0);
+	}
+	72% {
+		transform: translate(-4px, -4px);
+	}
+	84% {
+		transform: translate(0, 2px);
+	}
+	96% {
+		transform: translate(4px, 4px);
+	}
+	100% {
+		transform: translate(0, 0);
+	}
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */

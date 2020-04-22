@@ -34,15 +34,62 @@
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
 }
+.btn::before,
+.btn::after {
+	/* 1 Positioning */
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	/* 2 Block model */
+	width: 0;
+	height: 2px;
+
+	/* 4 Visual */
+	content: '';
+	background: $color-primary-dark;
+
+	/* 5 Animation */
+	transition: 400ms ease all;
+}
+.btn::after {
+	/* 1 Positioning */
+	top: inherit;
+	right: inherit;
+	bottom: 0;
+	left: 0;
+}
 .btn:hover {
 	/* 4 Visual */
-	background-color: $color-primary-dark;
-	border: 1px solid $color-primary-dark;
+	// background-color: $color-primary-dark;
+	// border: 1px solid $color-primary-dark;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: 0;
+}
+.btn:hover::before,
+.btn:hover::after {
+	/* 2 Block model */
+	width: 100%;
+
+	/* 4 Visual */
+	transition: 800ms ease all;
 }
 .btn:focus {
 	/* 4 Visual */
-	background-color: $color-primary-dark;
-	border: 1px solid $color-primary-dark;
+	// background-color: $color-primary-dark;
+	// border: 1px solid $color-primary-dark;
+	background-color: transparent;
+	border-color: transparent;
+	border-radius: 0;
+}
+.btn:focus::before,
+.btn:focus::after {
+	/* 2 Block model */
+	width: 100%;
+
+	/* 4 Visual */
+	transition: 800ms ease all;
 }
 .btn:active {
 	/* 3 Typography */
@@ -51,12 +98,26 @@
 	/* 4 Visual */
 	background-color: $color-primary-x-dark;
 	border: 1px solid $color-primary-x-dark;
+	transition: 800ms ease all;
+}
+.btn:active::before,
+.btn:active::after {
+	/* 2 Block model */
+	display: none;
+
+	/* 4 Visual */
+	transition: 800ms ease all;
 }
 .btn:disabled {
 	/* 4 Visual */
 	cursor: not-allowed;
 	background-color: $color-primary-lite;
 	border: 1px solid $color-primary-lite;
+}
+.btn:disabled::before,
+.btn:disabled::after {
+	/* 2 Block model */
+	display: none;
 }
 .btn .icon {
 	/* 2 Block model */
@@ -94,4 +155,3 @@
 @import '--block/--block';
 @import '--outline/--outline';
 @import '--flat/--flat';
-@import '--circle/--circle';
