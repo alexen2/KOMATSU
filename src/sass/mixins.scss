@@ -1,27 +1,4 @@
 /*
- * Colors
- *
- */
-
-@mixin btn-colors-modifiers($value) {
-	color: nth($value, 1);
-	background-color: nth($value, 2);
-	border-color: nth($value, 3);
-	&:hover {
-		background-color: nth($value, 4);
-		border-color: nth($value, 5);
-	}
-	.icon {
-		@if nth($value, 6) == null {
-			fill: nth($value, 1);
-		}
-		@else {
-			fill: nth($value, 6);
-		}
-	}
-}
-
-/*
  * Fonts
  *
  */
@@ -65,53 +42,93 @@
  *
  */
 
-@mixin width-height($width-height, $w-breakpoints: $breakpoints) {
-	@each $w-breakpoint, $w-h in $width-height {
-		@if $w-breakpoint == null {
-			@include make-width-height($w-h);
+/*
+ * Blocks
+@include space(margin, bottom, red);
+@include space(padding, all, red);
+
+ $space: (
+  red: (
+  	null: 10px,
+  	sm: 10px,
+  	md: 12px,
+  	lg: 14px,
+  	xl: 16px
+  ),
+  orange : (
+  	null: 15px,
+  	sm: 20px,
+  	md: 25px,
+  	lg: 30px,
+  	xl: 35px
+  ),
+  green: (
+  	null: 10px,
+  	sm: 20px,
+  	md: 20px,
+  	lg: 30px,
+  	xl: 30px
+  )
+);
+ */
+
+@mixin space($type, $direction, $amountColor, $breakpoints: $space_breakpoints, $space: $space) {
+	$amountArr: map-get($space, $amountColor);
+	@each $breakpoint, $amount in $amountArr {
+		@if $breakpoint == null {
+			@if $type == margin {
+				@include margin($direction, $amount);
+			}
+			@else {
+				@include padding($direction, $amount);
+			}
 		}
 		@else {
-			@if map-has-key($w-breakpoints, $w-breakpoint) {
-				$w-breakpoint: map-get($w-breakpoints, $w-breakpoint);
+			@if map-has-key($breakpoints, $breakpoint) {
+				$breakpoint: map-get($breakpoints, $breakpoint);
 			}
-			@media screen and (min-width: $w-breakpoint) {
-				@include make-width-height($w-h);
+			@media (min-width: $breakpoint) {
+				@if $type == margin {
+					@include margin($direction, $amount);
+				}
+				@else {
+					@include padding($direction, $amount);
+				}
 			}
 		}
 	}
 }
-@mixin make-width-height($width-height) {
-	width: nth($width-height, 1);
-	height: nth($width-height, 2);
-}
-@mixin margin($margin, $margin-side, $w-breakpoints: $breakpoints) {
-	@each $w-breakpoint, $margin-value in $margin {
-		@if $w-breakpoint == null {
-			@if $margin-side == 'left' {
-				@include margin-left($margin-value);
-			}
-			@if $margin-side == 'right' {
-				@include margin-right($margin-value);
-			}
-		}
-		@else {
-			@if map-has-key($w-breakpoints, $w-breakpoint) {
-				$w-breakpoint: map-get($w-breakpoints, $w-breakpoint);
-			}
-			@media screen and (min-width: $w-breakpoint) {
-				@if $margin-side == 'left' {
-					@include margin-left($margin-value);
-				}
-				@if $margin-side == 'right' {
-					@include margin-right($margin-value);
-				}
-			}
-		}
+@mixin margin($direction, $amount) {
+	@if $direction == all {
+		margin: $amount;
+	}
+	@else if $direction == top {
+		margin-top: $amount;
+	}
+	@else if $direction == left {
+		margin-left: $amount;
+	}
+	@else if $direction == right {
+		margin-right: $amount;
+	}
+	@else {
+		margin-bottom: $amount;
 	}
 }
-@mixin margin-left($margin-left) {
-	margin-left: $margin-left;
-}
-@mixin margin-right($margin-right) {
-	margin-right: $margin-right;
+@mixin padding($direction, $amount) {
+	@if $direction == all {
+		padding: $amount;
+	}
+	@else if $direction == top {
+		padding-top: $amount;
+	}
+	@else if $direction == left {
+		padding-left: $amount;
+	}
+	@else if $direction == right {
+		padding-right: $amount;
+	}
+	@else {
+		padding-bottom: $amount;
+	}
 }

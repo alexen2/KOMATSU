@@ -4,24 +4,9 @@
 
 	/* 3 Typography */
 	font-family: $font-main;
-	font-size: 26px;
+	font-size: 18px;
 	font-weight: 700;
-	line-height: 32px;
-	color: $color-text;
+	line-height: 20px;
+	color: $color-secondary;
 	text-transform: uppercase;
-	@media (min-width: 768px) {
-		/* 3 Typography */
-		font-size: 34px;
-		line-height: 40px;
-	}
-	@media (min-width: 992px) {
-		/* 3 Typography */
-		font-size: 38px;
-		line-height: 46px;
-	}
-	@media (min-width: 1200px) {
-		/* 3 Typography */
-		font-size: 18px;
-		line-height: 20px;
-	}
 }

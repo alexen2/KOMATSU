@@ -7,13 +7,13 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 20px 20px;
+	padding: 20px 10px;
 	margin: 0;
 	overflow: visible;
 
 	/* 3 Typography */
 	font-family: $font-main;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 700;
 	line-height: 20px;
 	color: $color-secondary;
@@ -33,6 +33,14 @@
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		padding: 20px 20px;
+
+		/* 3 Typography */
+		font-size: 18px;
+		line-height: 20px;
+	}
 }
 .btn-circle__text {
 	/* 1 Positioning */
@@ -151,7 +159,7 @@
 }
 .btn-circle:active {
 	/* 2 Block model */
-	padding: 20px 20px;
+	padding: 20px 10px;
 
 	/* 3 Typography */
 	color: $color-white;
@@ -161,6 +169,10 @@
 	border: 0;
 	outline: none;
 	transition: 800ms ease all;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		padding: 20px 20px;
+	}
 }
 .btn-circle:active::before {
 	/* 4 Visual */

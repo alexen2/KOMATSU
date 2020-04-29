@@ -1,0 +1,51 @@
+.top {
+	/* 2 Block model */
+	padding-top: 49px;
+	@include space(margin, bottom, red);
+
+	/* 4 Visual */
+	background-image: url(../images/big-lines.svg);
+	background-repeat: no-repeat;
+	background-position: calc(100vw - 326px) -77px;
+	background-size: 644px;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		padding-top: 164px;
+	}
+}
+.top__company {
+	/* 2 Block model */
+	@include space(padding, top, violet);
+	@include space(margin, bottom, blue);
+	@media (min-width: 1200px) {
+		margin-bottom: 0;
+	}
+}
+.top__title {
+	/* 2 Block model */
+	@include space(margin, bottom, blue);
+}
+.top__lead {
+	/* 2 Block model */
+	@include space(margin, bottom, mediumblue);
+}
+.top__bottom {
+	/* 2 Block model */
+	display: none;
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		display: block;
+	}
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */

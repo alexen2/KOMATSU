@@ -13,6 +13,9 @@ ul {
 	padding: 0;
 	margin: 0;
 }
+.wrapper {
+	overflow-x: hidden;
+}
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -27,6 +30,15 @@ input[type="radio"].visually-hidden {
 	border: 0;
 	clip-path: inset(100%);
 }
+.scrolled {
+	padding-top: 85px;
+	@media (min-width: 992px) {
+		padding-top: 84px;
+	}
+}
+.overflow-heidden {
+	overflow: hidden;
+}
 .mr-mb10 {
-	margin-bottom: 50px;
+	margin-bottom: 10px;
 }

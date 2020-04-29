@@ -7,12 +7,12 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 22px 40px;
+	padding: 16px 40px;
 	margin: 0;
 
 	/* 3 Typography */
 	font-family: $font-main;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 700;
 	line-height: 20px;
 	color: $color-secondary;
@@ -33,6 +33,13 @@
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		padding: 22px 40px;
+
+		/* 3 Typography */
+		font-size: 18px;
+	}
 }
 .btn::before,
 .btn::after {

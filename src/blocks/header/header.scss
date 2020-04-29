@@ -1,5 +1,192 @@
 .header {
+	/* 1 Positioning */
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+
 	/* 2 Block model */
-	padding-top: 10px;
-	padding-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	@include space(padding, top, green);
+	@include space(padding, bottom, green);
+
+	// /* 4 Visual */
+	// box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		padding-right: 21px;
+		padding-left: 22px;
+	}
+	@media (min-width: 1600px) {
+		/* 2 Block model */
+		padding-right: 42px;
+		padding-left: 43px;
+	}
+	@media (min-width: 1920px) {
+		/* 2 Block model */
+		padding-right: 84px;
+		padding-left: 86px;
+	}
 }
+.header__logo .logo {
+	/* 2 Block model */
+	max-width: 98px;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		max-width: 184px;
+	}
+}
+.header__menu {
+	/* 2 Block model */
+	display: none;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		display: block;
+	}
+}
+.header__contact {
+	/* 2 Block model */
+	display: none;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		display: flex;
+		align-items: center;
+	}
+}
+.header__contact .link {
+	/* 2 Block model */
+	display: inline-block;
+	margin-right: 50px;
+
+	/* 3 Typography */
+	color: $color-secondary;
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		margin-right: 25px;
+	}
+	@media (min-width: 1600px) {
+		/* 2 Block model */
+		margin-right: 50px;
+	}
+}
+.header__contact .btn {
+	/* 2 Block model */
+	display: none;
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		display: block;
+	}
+}
+.header__mobile {
+	/* 1 Positioning */
+	position: absolute;
+	top: 0;
+	right: -100%;
+
+	/* 2 Block model */
+	display: block;
+	width: 100%;
+	height: 100vh;
+	padding-top: 15px;
+
+	/* 4 Visual */
+	background-color: $color-white;
+
+	/* 5 Animation */
+	transition: opacity 0.5s;
+}
+.header__mobile--open {
+	/* 1 Positioning */
+	right: 0;
+
+	/* 5 Animation */
+	animation: header-mobile 0.5s linear;
+}
+.header__hamburger {
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		display: none;
+	}
+}
+.header__btn {
+	/* 1 Positioning */
+	position: relative;
+
+	/* 2 Block model */
+	display: block;
+	width: 22px;
+	height: 19px;
+
+	/* 4 Visual */
+	cursor: pointer;
+	background: none;
+	border: none;
+	outline: none;
+}
+.header__btn::before,
+.header__btn::after {
+	/* 1 Positioning */
+	position: absolute;
+	right: 0;
+	left: 0;
+
+	/* 2 Block model */
+	display: block;
+	height: 3px;
+
+	/* 4 Visual */
+	content: '';
+	background-color: $color-secondary;
+}
+.header__btn::before {
+	/* 1 Positioning */
+	top: 0;
+}
+.header__btn::after {
+	/* 1 Positioning */
+	bottom: 0;
+}
+.header__btn-border {
+	/* 1 Positioning */
+	position: absolute;
+	top: 8px;
+	right: 0;
+	left: 0;
+
+	/* 2 Block model */
+	display: block;
+	height: 3px;
+
+	/* 4 Visual */
+	background-color: $color-secondary;
+}
+
+@keyframes header-mobile {
+	0% {
+		right: -100%;
+		opacity: 0;
+	}
+	1% {
+		right: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */
