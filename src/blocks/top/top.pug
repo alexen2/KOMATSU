@@ -1,9 +1,9 @@
 section.top
 	h1.visually-hidden Спецтехника
 	div.container
-		div.row
+		div.row.align-items-center
 			div.col-12.col-md-6.order-2.order-md-1
-				p.h4.top__company ООО &laquo;Комацу&raquo;
+				p.h4.title.top__company ООО &laquo;Комацу&raquo;
 				p.h1.top__title Спецтехника  среднего класса
 				p.text.top__lead В&nbsp;рамках стратегии развития бизнеса компания меняет ценовую политику на&nbsp;всю линейку техники Komatsu
 				a.btn-circle(href="#") 
@@ -11,4 +11,9 @@ section.top
 			div.col-12.col-md-6.order-1.order-md-2
 				include ../slider/slider.pug
 	div.top__bottom
-		img.top__mouse(src="imges/mous", alt="компьютерная мышь")
+		+social([
+			  {url: '#', text: 'linkidin', icon: 'icon--32-linkidin'},
+				{url: '#', text: 'twiter', icon: 'icon--32-twiter'},
+				{url: '#', text: 'facebook', icon: 'icon--32-facebook'}
+			])(class="social--flat")
+		img.top__mouse(src="images/icon--25-42-mouse.svg", alt="компьютерная мышь")

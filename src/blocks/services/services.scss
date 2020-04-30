@@ -1,0 +1,20 @@
+.services {
+	/* 2 Block model */
+	@include space(padding, bottom, red);
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		margin-bottom: -30px;
+	}
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */

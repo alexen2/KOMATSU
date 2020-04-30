@@ -1,15 +1,31 @@
 .slider {
 	/* 1 Positioning */
-	right: -15px;
+	right: calc(3vw - 26px);
 
 	/* 2 Block model */
 	display: block;
 	padding-top: 22px;
-	@include space(margin, bottom, orange);
+	@include space(margin, bottom, yellow);
+	@media (min-width: 576px) {
+		/* 1 Positioning */
+		right: -10px;
+	}
 	@media (min-width: 768px) {
+		/* 1 Positioning */
+		right: -30px;
+
 		/* 2 Block model */
+		padding-top: 0;
 		margin-bottom: 0;
 	}
+	@media (min-width: 1200px) {
+		/* 1 Positioning */
+		right: -75px;
+	}
+}
+.slider__item {
+	/* 4 Visual */
+	outline: none;
 }
 .slider__body {
 	/* 2 Block model */
@@ -20,6 +36,30 @@
 	/* 2 Block model */
 	width: 264px;
 	margin-left: auto;
+	@media (min-width: 500px) {
+		/* 2 Block model */
+		width: 290px;
+	}
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		width: 330px;
+	}
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		width: 450px;
+	}
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		width: 508px;
+	}
+	@media (min-width: 1600px) {
+		/* 2 Block model */
+		width: 715px;
+	}
+	@media (min-width: 1920px) {
+		/* 2 Block model */
+		width: 792px;
+	}
 }
 .slick-disabled {
 	/* 2 Block model */
@@ -44,6 +84,27 @@
 	/* 4 Visual */
 	list-style: none;
 	transform: translateY(50%);
+	@media (min-width: 768px) {
+		/* 1 Positioning */
+		left: -54vw;
+	}
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		left: -53.5vw;
+	}
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		left: -55vw;
+	}
+	@media (min-width: 1600px) {
+		/* 2 Block model */
+		left: -54vw;
+	}
+	@media (min-width: 1920px) {
+		/* 2 Block model */
+		bottom: calc(50% + 13px);
+		left: -50vw;
+	}
 }
 .slider__dots li {
 	/* 2 Block model */
@@ -61,6 +122,12 @@
 	/* 4 Visual */
 	cursor: pointer;
 	border-radius: 50%;
+	@media (min-width: 1400px) {
+		/* 2 Block model */
+		width: 18px;
+		height: 18px;
+		margin-bottom: 25px;
+	}
 }
 .slider__dots li:last-child {
 	/* 2 Block model */
@@ -88,6 +155,11 @@
 	border: 0;
 	border-radius: 50%;
 	outline: none;
+	@media (min-width: 1400px) {
+		/* 2 Block model */
+		width: 10px;
+		height: 10px;
+	}
 }
 .slider__dots .slick-active button {
 	/* 4 Visual */

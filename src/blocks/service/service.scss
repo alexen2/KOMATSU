@@ -1,3 +1,67 @@
 .service {
-	display: block;
+	/* 2 Block model */
+	box-sizing: border-box;
+	@include space(padding, all, mediumblue);
+	@include space(margin, bottom, darkblue);
+
+	/* 4 Visual */
+	background: $color-white;
+	border-radius: 5px;
+	box-shadow: 0 0 35px rgba(0, 0, 0, 0.07);
 }
+.service--mb0 {
+	/* 2 Block model */
+	margin-bottom: 0;
+}
+.service__icon {
+	/* 2 Block model */
+	display: flex;
+	@include space(margin, bottom, darkblue);
+}
+.service .service__title {
+	/* 2 Block model */
+	@include space(margin, bottom, crayola);
+
+	/* 3 Typography */
+	text-transform: uppercase;
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		min-height: 40px;
+	}
+	@media (min-width: 1411px) {
+		/* 2 Block model */
+		min-height: 20px;
+	}
+}
+.service__text {
+	/* 2 Block model */
+	min-height: 80px;
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		min-height: 144px;
+	}
+	@media (min-width: 1200px) {
+		/* 2 Block model */
+		min-height: 144px;
+	}
+	@media (min-width: 1600px) {
+		/* 2 Block model */
+		min-height: 74px;
+	}
+}
+.service--active {
+	/* 4 Visual */
+	background-color: $color-primary;
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */

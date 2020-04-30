@@ -4,6 +4,7 @@ let slider = $('.slider').slick({
 	dotsClass: 'slider__dots',
 	infinite: false,
 	speed: 300,
-	slidesToShow: 1,
+  fade: true,
+  cssEase: 'linear',
   slidesToScroll: 1
 });

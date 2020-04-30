@@ -4,6 +4,26 @@
 @import 'mixins';
 @import 'base';
 
+// Atom-blocks
+
+@import '../blocks/pagination/pagination';
+@import '../blocks/h1/h1';
+@import '../blocks/h2/h2';
+@import '../blocks/h3/h3';
+@import '../blocks/h4/h4';
+@import '../blocks/h5/h5';
+@import '../blocks/h6/h6';
+@import '../blocks/text/text';
+@import '../blocks/big-text/big-text';
+@import '../blocks/lead/lead';
+@import '../blocks/link/link';
+@import '../blocks/page-text/page-text';
+@import '../blocks/img/img';
+@import '../blocks/form/form';
+@import '../blocks/slider/slider';
+@import '../blocks/title/title';
+@import '../blocks/header-mobile/header-mobile';
+
 // Atom-mixins
 
 @import '../blocks/icon/icon';
@@ -25,32 +45,15 @@
 @import '../blocks/search/search';
 @import '../blocks/service/service';
 @import '../blocks/card/card';
-@import '../blocks/indicator/indicator';
 @import '../blocks/social/social';
-
-// Atom-blocks
-
-@import '../blocks/pagination/pagination';
-@import '../blocks/h1/h1';
-@import '../blocks/h2/h2';
-@import '../blocks/h3/h3';
-@import '../blocks/h4/h4';
-@import '../blocks/h5/h5';
-@import '../blocks/h6/h6';
-@import '../blocks/text/text';
-@import '../blocks/big-text/big-text';
-@import '../blocks/lead/lead';
-@import '../blocks/link/link';
-@import '../blocks/page-text/page-text';
-@import '../blocks/img/img';
-@import '../blocks/form/form';
-@import '../blocks/slider/slider';
-@import '../blocks/header-mobile/header-mobile';
+@import '../blocks/info/info';
 
 // Main Blocks
 
 @import '../blocks/header/header';
 @import '../blocks/main/main';
 @import '../blocks/top/top';
-@import '../blocks/about-company/about-company';
+@import '../blocks/services/services';
+@import '../blocks/catalog/catalog';
+@import '../blocks/about/about';
 @import '../blocks/footer/footer';

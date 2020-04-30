@@ -2,5 +2,5 @@ mixin service(data)
 	div.service(class!=attributes.class)
 		div.service__icon
 			+icon(data.icon, 'icon--50')
-		h4.h4!=data.title
-		p.text--sm!=data.text
+		h4.h4.service__title!=data.title
+		p.text--sm.service__text!=data.text

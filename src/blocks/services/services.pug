@@ -1,0 +1,13 @@
+section.services
+	h2.visually-hidden Услуги
+
+	div.container
+		div.row
+			div.col-12.col-md-6.col-xl-3
+				+service({icon: 'icon--50-calc', title: 'лизинг', text: 'Удобное финансирование, которое позволяет приобрести технику и&nbsp;сохранить оборотные средства.'})
+			div.col-12.col-md-6.col-xl-3
+				+service({icon: 'icon--50-trcator', title: 'Traide-in', text: 'Услуга позволяет обновить парк техники. Получите новую технику в&nbsp;замен старой.'})(class="service--active")
+			div.col-12.col-md-6.col-xl-3
+				+service({icon: 'icon--50-operator', title: 'сервис и&nbsp;поддержка', text: 'ООО &laquo;Каматсу&raquo;&nbsp;&mdash; гарантирует своевременное и&nbsp;качественное обслуживание техники.'})
+			div.col-12.col-md-6.col-xl-3
+				+service({icon: 'icon--50-techhelp', title: 'каталог запчастей', text: 'Полная нуменклатура запасных частей'})(class="service--mb0")

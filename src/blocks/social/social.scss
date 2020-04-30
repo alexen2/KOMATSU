@@ -1,3 +1,104 @@
 .social {
-	display: block;
+	/* 2 Block model */
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	/* 4 Visual */
+	list-style: none;
 }
+.social__item {
+	/* 2 Block model */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	margin-right: 10px;
+
+	/* 4 Visual */
+	background-color: $color-white;
+	box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+}
+.social__item:last-child {
+	/* 2 Block model */
+	margin-right: 0;
+}
+.social__link {
+	/* 2 Block model */
+	display: flex;
+
+	/* 4 Visual */
+	outline: none;
+
+	/* 5 Animation */
+	transition: all $animation-speed;
+}
+.social__link:hover {
+	/* 4 Visual */
+	background-color: $color-secondary;
+}
+.social__link:focus {
+	/* 4 Visual */
+	background-color: $color-secondary;
+}
+.social__link:active {
+	/* 4 Visual */
+	background-color: $color-secondary;
+}
+.social__link:hover .icon {
+	/* 4 Visual */
+	fill: $color-white;
+}
+.social__link:focus .icon {
+	/* 4 Visual */
+	fill: $color-white;
+}
+.social__link:active .icon {
+	/* 4 Visual */
+	fill: $color-white;
+}
+.social--flat .social__item {
+	/* 4 Visual */
+	background-color: transparent;
+	box-shadow: none;
+}
+.social--flat .social__link:hover {
+	/* 4 Visual */
+	background-color: transparent;
+	opacity: 0.7;
+}
+.social--flat .social__link:focus {
+	/* 4 Visual */
+	background-color: transparent;
+	opacity: 0.7;
+}
+.social--flat .social__link:active {
+	/* 4 Visual */
+	background-color: transparent;
+	opacity: 0.7;
+}
+.social--flat .social__link:hover .icon {
+	/* 4 Visual */
+	fill: #434B60;
+}
+.social--flat .social__link:focus .icon {
+	/* 4 Visual */
+	fill: #434B60;
+}
+.social--flat .social__link:active .icon {
+	/* 4 Visual */
+	fill: #434B60;
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */
