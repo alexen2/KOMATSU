@@ -1,0 +1,49 @@
+.feedback {
+	/* 2 Block model */
+	@include space(margin, bottom, red);
+}
+.feedback__body {
+	/* 3 Typography */
+	text-align: center;
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		@include space(padding, top, green);
+		@include space(padding, bottom, green);
+
+		/* 3 Typography */
+		text-align: left;
+
+		/* 4 Visual */
+		border-radius: 5px;
+		box-shadow: 0 4px 35px rgba(0, 0, 0, 0.1);
+	}
+}
+.feedback__body .logo {
+	/* 2 Block model */
+	margin: 0 auto;
+	@include space(margin, bottom, blue);
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		margin-bottom: 0;
+	}
+}
+.feedback__body .text {
+	/* 2 Block model */
+	@include space(margin, bottom, blue);
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		margin-bottom: 0;
+	}
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */

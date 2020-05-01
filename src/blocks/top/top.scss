@@ -22,6 +22,9 @@
 		background-size: 1275px;
 	}
 	@media (min-width: 1600px) {
+		/* 2 Block model */
+		padding-top: 184px;
+
 		/* 4 Visual */
 		background-position: calc(100vw - 769px) -134px;
 		background-size: 1506px;
@@ -32,12 +35,15 @@
 		background-size: 1650px;
 	}
 }
+.top__info {
+	@media (min-width: 1600px) {
+		/* 2 Block model */
+		padding-top: 35px;
+	}
+}
 .top__company {
 	/* 2 Block model */
 	@include space(margin, bottom, blue);
-	@media (min-width: 1200px) {
-		margin-bottom: 0;
-	}
 }
 .top__title {
 	/* 2 Block model */
@@ -46,6 +52,14 @@
 .top__lead {
 	/* 2 Block model */
 	@include space(margin, bottom, mediumblue);
+}
+.top .btn-circle {
+	/* 2 Block model */
+	margin-left: 6px;
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		margin-left: 0;
+	}
 }
 .top__bottom {
 	/* 2 Block model */

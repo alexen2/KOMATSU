@@ -8,7 +8,7 @@
 }
 .menu-vertical__item {
 	/* 2 Block model */
-	margin-bottom: 8px;
+	@include space(margin, bottom, crayola);
 
 	/* 3 Typography */
 	line-height: 16px;
@@ -18,16 +18,7 @@
 	margin-bottom: 0;
 }
 .menu-vertical__link {
-	/* 2 Block model */
-	margin: 0;
-	margin-bottom: 8px;
-
 	/* 3 Typography */
-	font-family: $font-main;
-	font-size: 14px;
-	font-weight: normal;
-	line-height: 16px;
-	color: #CCCCCC;
 	text-decoration: none;
 
 	/* 5 Animation */
@@ -35,5 +26,22 @@
 }
 .menu-vertical__link:hover {
 	/* 3 Typography */
-	color: #000000;
+	text-decoration: underline;
+
+	/* 4 Visual */
+	opacity: 0.9;
+}
+.menu-vertical__link:focus {
+	/* 3 Typography */
+	text-decoration: underline;
+
+	/* 4 Visual */
+	opacity: 0.9;
+}
+.menu-vertical__link:active {
+	/* 3 Typography */
+	text-decoration: underline;
+
+	/* 4 Visual */
+	opacity: 0.9;
 }

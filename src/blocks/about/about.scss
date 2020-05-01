@@ -1,3 +1,105 @@
-.about-company {
-	display: block;
+.about {
+	/* 2 Block model */
+	@include space(margin, bottom, red);
 }
+.about .h2 {
+	/* 2 Block model */
+	@include space(margin, bottom, darkblue);
+}
+.about__body {
+	/* 2 Block model */
+	@include space(margin, bottom, orange);
+	@media (min-width: 1400px) {
+		/* 2 Block model */
+		margin-bottom: 0;
+	}
+}
+.about__body .text {
+	/* 2 Block model */
+	max-width: 688px;
+	@include space(margin, bottom, crayola);
+}
+.about__body .text--mb30 {
+	/* 2 Block model */
+	@include space(margin, bottom, mediumblue);
+}
+.about__body .btn-circle {
+	/* 2 Block model */
+	margin-left: 6px;
+	@media (min-width: 1400px) {
+		/* 2 Block model */
+		margin-left: 0;
+	}
+}
+.about__row {
+	/* 2 Block model */
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	@media (min-width: 1750px) {
+		/* 2 Block model */
+		justify-content: start;
+	}
+}
+.about__item {
+	/* 2 Block model */
+	width: 100%;
+	max-width: 290px;
+	@media (min-width: 1750px) {
+		/* 2 Block model */
+		max-width: 260px;
+	}
+}
+.about__item:nth-child(1) {
+	/* 2 Block model */
+	order: 1;
+}
+.about__item:nth-child(2) {
+	/* 2 Block model */
+	order: 3;
+	@media (min-width: 1750px) {
+		/* 2 Block model */
+		order: 2;
+	}
+}
+.about__item:nth-child(3) {
+	/* 2 Block model */
+	order: 2;
+	@media (min-width: 1750px) {
+		/* 2 Block model */
+		order: 4;
+	}
+}
+.about__item:nth-child(4) {
+	/* 2 Block model */
+	order: 4;
+	@media (min-width: 1750px) {
+		/* 2 Block model */
+		order: 3;
+	}
+}
+.about__item:nth-child(5) {
+	/* 2 Block model */
+	order: 5;
+}
+.img.about__item-img {
+	/* 2 Block model */
+	height: 250px;
+	@media (min-width: 992px) {
+		/* 2 Block model */
+		height: 258px;
+	}
+}
+
+/* 1 Positioning */
+
+/* 2 Block model */
+
+/* 3 Typography */
+
+/* 4 Visual */
+
+/* 5 Animation */
+
+/* 6 Misc */

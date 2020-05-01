@@ -42,6 +42,11 @@ input[type="radio"].visually-hidden {
 .gray {
 	background-color: $color-background;
 }
+.center {
+	@media (min-width: 1200px) {
+		text-align: center;
+	}
+}
 .mr-mb10 {
 	margin-bottom: 10px;
 }

@@ -9,14 +9,14 @@ $(document).ready(function() {
 		$('body').toggleClass('overflow-heidden ');
 	});
 
-	let scrolled = 0;
+	let scrolled = 25;
 
-	changeScrolled();
-});
+	// changeScrolled();
+
 
 $(window).scroll(function(){
 	let $this = $(this),
-			 st = $this.scrollTop();
+		st = $this.scrollTop();
 
 	menuScrollDesktop(st);
 });
@@ -47,3 +47,5 @@ function menuDesktopShow(st) {
 function changeScrolled() {
 	scrolled = 0;
 };
+
+});

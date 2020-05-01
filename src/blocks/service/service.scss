@@ -1,13 +1,21 @@
 .service {
 	/* 2 Block model */
 	box-sizing: border-box;
-	@include space(padding, all, mediumblue);
+	padding-right: 28px;
+	padding-left: 28px;
+	@include space(padding, top, mediumblue);
+	@include space(padding, bottom, mediumblue);
 	@include space(margin, bottom, darkblue);
 
 	/* 4 Visual */
 	background: $color-white;
 	border-radius: 5px;
 	box-shadow: 0 0 35px rgba(0, 0, 0, 0.07);
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		padding-right: 40px;
+		padding-left: 40px;
+	}
 }
 .service--mb0 {
 	/* 2 Block model */
@@ -38,9 +46,9 @@
 	min-height: 80px;
 	@media (min-width: 1200px) {
 		/* 2 Block model */
-		min-height: 144px;
+		min-height: 168px;
 	}
-	@media (min-width: 1200px) {
+	@media (min-width: 1400px) {
 		/* 2 Block model */
 		min-height: 144px;
 	}

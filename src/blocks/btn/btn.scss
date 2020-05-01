@@ -12,7 +12,7 @@
 
 	/* 3 Typography */
 	font-family: $font-main;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 700;
 	line-height: 20px;
 	color: $color-secondary;
@@ -33,6 +33,13 @@
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	-webkit-tap-highlight-color: transparent;
+	@media (min-width: 768px) {
+		/* 2 Block model */
+		padding: 7px 24px;
+
+		/* 3 Typography */
+		font-size: 14px;
+	}
 	@media (min-width: 992px) {
 		/* 2 Block model */
 		padding: 22px 40px;

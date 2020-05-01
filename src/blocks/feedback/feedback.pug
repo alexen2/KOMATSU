@@ -1,0 +1,11 @@
+section.feedback
+	h2.visually-hidden Обратная связь
+	div.container
+		div.feedback__body
+			div.row.align-items-center
+				div.col-12.col-md-3
+					+logo({img: 'logo.png'})(class="logo--big")
+				div.col-12.col-md-6
+					p.text Нам важна обратная связь. Пожалуйста, поделитесь мнением о&nbsp;работе с&nbsp;нами.
+				div.col-12.col-md-3.center
+					+btn({text: 'заполнить', type: 'link', url: '#'})
